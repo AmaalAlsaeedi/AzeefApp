@@ -1,0 +1,169 @@
+import SwiftUI
+
+struct ContentView: View {
+    @State private var selectedTab = 0
+    
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            // First tab
+            VStack {
+                ZStack {
+                    Color("1")
+                        .ignoresSafeArea()
+                    Image("Background-pic")
+                        .resizable()
+                        .frame(width: 550.0, height: 530.0)
+                        .position(CGPoint(x: 196.0, y: 100.0))
+                    
+                    Image("Profile-pic")
+                        .resizable()
+                        .frame(width: 180, height: 180)
+                        .clipShape(Circle())
+                        .padding(.bottom, 100.0)
+                        .position(CGPoint(x: 200.0, y: 150.0))
+                    
+                    Image(systemName: "pencil.circle")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                        .foregroundColor(Color(red: 0.06, green: 0.16, blue: 0.23))
+                        .padding(.bottom, 100.0)
+                        .position(CGPoint(x: 300.0, y: 190.0))
+                    
+                    Text("آمــال")
+                        .font(.custom("Al Bayan", size: 25))
+                        .position(CGPoint(x: 200, y: 210))
+                        .foregroundColor(.black)
+                    
+                    Text("البريد الالكتروني")
+                        .font(.custom("Al Bayan", size: 20))
+                        .fontWeight(.bold)
+                        .position(CGPoint(x: 300, y: 300))
+                        .foregroundColor(.gray)
+                    
+                    Text("رقم الجوال")
+                        .font(.custom("Al Bayan", size: 20))
+                        .fontWeight(.bold)
+                        .position(CGPoint(x: 300, y: 387))
+                        .foregroundColor(.gray)
+                    
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.white)
+                        .frame(width: 295, height: 45)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color("2"), lineWidth: 2))
+                        .position(CGPoint(x: 200, y: 422))
+                    
+                    TextField("Amaal@example.com", text: .constant(""))
+                        .multilineTextAlignment(.center)
+                        .font(.custom("Al Bayan", size: 18))
+                        .frame(width: 300, height: 40)
+                        .foregroundColor(.black)
+                        .background(Color(red: 0.95, green: 0.94, blue: 0.93))
+                        .cornerRadius(10)
+                        .foregroundColor(.black)
+                        .padding(.horizontal, 70)
+                        .position(CGPoint(x: 200, y: 270))
+                        .offset(x: 0, y: 70)
+                    
+                    Image(systemName: "square.and.pencil")
+                        .position(CGPoint(x: 70, y: 338))
+                    
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.white)
+                        .frame(width: 295, height: 45)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color("2"), lineWidth: 2))
+                        .position(CGPoint(x: 200, y: 530))
+                    
+                    TextField("+9661234567890", text: .constant(""))
+                        .multilineTextAlignment(.center)
+                        .font(.custom("Al Bayan", size: 18))
+                        .frame(width: 300, height: 40)
+                        .foregroundColor(.black)
+                        .background(Color(red: 0.95, green: 0.94, blue: 0.93))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 70)
+                        .position(CGPoint(x: 200, y: 330))
+                        .offset(x: 0, y: 100)
+                    
+                    Image(systemName: "square.and.pencil")
+                        .position(CGPoint(x: 70, y: 429))
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color("2"))
+                            .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                            .frame(width: 200, height: 45)
+                            .shadow(radius: 1)
+                            .cornerRadius(15)
+                        
+                        Button("حفظ") {
+                            // Handle save logic here
+                        }
+                        .background(Color("2"))
+                        .font(.custom("Al Bayan", size: 20))
+                        .foregroundColor(.black)
+                        .frame(width: 295.0, height: 20.0)
+                    }
+                    .offset(x: 0, y: 90)
+                    .position(CGPoint(x: 200, y: 450))
+                    
+                    Spacer()
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color("6"))
+                            .background(Color(red: 0.06, green: 0.16, blue: 0.23))
+                            .frame(width: 200, height: 45)
+                            .shadow(radius: 1)
+                            .cornerRadius(15)
+                        
+                        Button("تسجيل الخروج") {
+                            // Handle logout logic here
+                        }
+                        .background(Color("6"))
+                        .font(.custom("Al Bayan", size: 20))
+                        .foregroundColor(.white)
+                        .frame(width: 295.0, height: 20.0)
+                    }
+                    .offset(x: 0, y: 150)
+                    .position(CGPoint(x: 200, y:450))
+                }
+            }
+            // First tab
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("ملفي الشخصي")
+            }
+            .tag(0)
+            
+            // Second tab
+            Text("صفحة الخريطة")
+            .font(.custom("Al Bayan", size: 20))
+            .tabItem {
+                Image(systemName: "pin.fill")
+                Text("الخريطة")
+            }
+            .tag(1)
+            
+            // Third tab
+            Text("قائمة المعزوفات الخاصة بك")
+            .font(.custom("Al Bayan", size: 20))
+            .tabItem {
+                Image(systemName: "music.note.list")
+                Text("قائمة المعزوفات")
+            }
+            .tag(2)
+        }
+        .accentColor(Color(red: 1, green: 0.59, blue: 0.1)) // Set the accent color when a tab is selected
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
