@@ -10,9 +10,9 @@ struct ContentView: View {
                 ZStack {
                     Color("1")
                         .ignoresSafeArea()
-                    Image("Background-pic")
+                    Image("Background-pic2")
                         .resizable()
-                        .frame(width: 560.0, height: 520.0)
+                        .frame(width: 800.0, height: 500.0)
                         .position(CGPoint(x: 200.0, y: 100.0))
                     
                     Image("Profile-pic")
@@ -29,7 +29,7 @@ struct ContentView: View {
                         .foregroundColor(Color(red: 0.06, green: 0.16, blue: 0.23))
                         .padding(.bottom, 100.0)
                         .position(CGPoint(x: 300.0, y: 190.0))
-                    
+
                     Text("آمــال")
                         .font(.custom("Al Bayan", size: 25))
                         .position(CGPoint(x: 200, y: 210))
