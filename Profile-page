@@ -1,0 +1,199 @@
+//
+//  ContentView.swift
+//  Azeef
+//
+//  Created by Amaal Ali Alsaeedi on 12/05/1445 AH.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var selectedTab = 0
+    
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            // First tab
+            VStack {
+                ZStack {
+                    Color("1")
+                        .ignoresSafeArea()
+                    Image("Background-pic2")
+                        .resizable()
+                        .frame(width: 800.0, height: 500.0)
+                        .position(CGPoint(x: 200.0, y: 100.0))
+                    
+                    
+                    Image("Profile-pic")
+                        .resizable()
+                        .frame(width: 180, height: 180)
+                        .clipShape(Circle())
+                        .padding(.bottom, 100.0)
+                        .position(CGPoint(x: 200.0, y: 150.0))
+                    
+                    Image(systemName: "pencil.circle")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                        .foregroundColor(Color(red: 0.06, green: 0.16, blue: 0.23))
+                        .padding(.bottom, 100.0)
+                        .position(CGPoint(x: 300.0, y: 190.0))
+                    
+                    Text("آمـال")
+                        .font(.custom("Al Bayan", size: 25))
+                        .position(CGPoint(x: 200, y: 210))
+                        .foregroundColor(.black)
+                    
+                    
+                    Text("مقاطع العزف الخاصة بي")
+                        .font(.custom("Al Bayan", size: 20))
+                        .position(CGPoint(x: 270, y: 260))
+                        .foregroundColor(.black)
+                        
+                   
+//                    ScrollView {
+                        VStack (spacing:50){
+                    
+                            ScrollView {
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 335, height: 104)
+                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .cornerRadius(15)
+                                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                                        .cornerRadius(30)
+                                    HStack(spacing:60){
+                                        Rectangle()
+                                        .frame(width: 90, height: 90)
+                                        .cornerRadius(25)
+                                        .clipped()
+                                        Text("عزفي على آلة الطبلة")
+                                        .font(Font.custom("Al Bayan", size: 24))
+                                        .multilineTextAlignment(.trailing)
+                                        .foregroundColor(.black)
+                                    }
+                                }
+                                //.offset(x: 0, y: 90)
+                                //.position(CGPoint(x: 200, y: 250))
+                            
+                            
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 335, height: 104)
+                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .cornerRadius(15)
+                                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                                        .cornerRadius(30)
+                                    HStack(spacing:60){
+                                        Rectangle()
+                                        .frame(width: 90, height: 90)
+                                        .cornerRadius(25)
+                                        .clipped()
+                                        Text("عزفي على آلة الطبلة")
+                                        .font(Font.custom("Al Bayan", size: 24))
+                                        .multilineTextAlignment(.trailing)
+                                        .foregroundColor(.black)
+                                    }
+                                }
+                                
+                            
+                                //.offset(x: 0, y: 90)
+                                //.position(CGPoint(x: 200, y: 370))
+                            
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 335, height: 104)
+                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .cornerRadius(15)
+                                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                                        .cornerRadius(30)
+                                    HStack(spacing:60){
+                                        Rectangle()
+                                        .frame(width: 90, height: 90)
+                                        .cornerRadius(25)
+                                        .clipped()
+                                        Text("عزفي على آلة الطبلة")
+                                        .font(Font.custom("Al Bayan", size: 24))
+                                        .multilineTextAlignment(.trailing)
+                                        .foregroundColor(.black)
+                                    }
+                                }
+                            
+                                //.offset(x: 0, y: 90)
+                               // .position(CGPoint(x: 200, y: 490))
+                            
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .frame(width: 335, height: 104)
+                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .cornerRadius(15)
+                                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                                        .cornerRadius(30)
+                                    HStack(spacing:60){
+                                        Rectangle()
+                                        .frame(width: 90, height: 90)
+                                        .cornerRadius(25)
+                                        .clipped()
+                                        Text("عزفي على آلة الطبلة")
+                                        .font(Font.custom("Al Bayan", size: 24))
+                                        .multilineTextAlignment(.trailing)
+                                        .foregroundColor(.black)
+                                    }
+                                }
+                            
+                                //.offset(x: 0, y: 90)
+                                //.position(CGPoint(x: 200, y: 620))
+                                
+                        }//end of scrollView
+                            .padding(.top, 300.0)}//end of VStack
+//                    Rectangle()
+//                      .foregroundColor(.clear)
+//                      .frame(width: 335, height: 104)
+//                      .background(Color(red: 0.06, green: 0.16, blue: 0.22))
+//                      .cornerRadius(15)
+//                      .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+//                      .cornerRadius(30)
+//                    
+//                      .offset(x: 0, y: 90)
+//                      .position(CGPoint(x: 200, y: 590))
+                    
+                }
+            }
+                        
+            // First tab
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("الملف الشخصي")
+            }
+            .tag(0)
+            
+            // Second tab
+            Text("صفحة الخريطة")
+            .font(.custom("Al Bayan", size: 20))
+            .tabItem {
+                Image(systemName: "map.fill")
+                Text("الخريطة")
+            }
+            .tag(1)
+            
+            // Third tab
+            Text("اكتشف المعزوفات")
+            .font(.custom("Al Bayan", size: 20))
+            .tabItem {
+                Image(systemName: "music.note.house.fill")
+                Text("اكتشف")
+            }
+            .tag(2)
+        }
+        .accentColor(Color(red: 1, green: 0.59, blue: 0.1)) // Set the accent color when a tab is selected
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
