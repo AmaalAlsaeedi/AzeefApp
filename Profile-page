@@ -34,7 +34,7 @@ struct ContentView: View {
                         .resizable()
                         .frame(width: 30, height: 30)
                         .clipShape(Circle())
-                        .foregroundColor(Color(red: 0.06, green: 0.16, blue: 0.23))
+                        .foregroundColor(Color(red: 0.33, green: 0.50, blue: 0.40))
                         .padding(.bottom, 100.0)
                         .position(CGPoint(x: 300.0, y: 190.0))
                     
@@ -58,7 +58,7 @@ struct ContentView: View {
                                     Rectangle()
                                         .foregroundColor(.clear)
                                         .frame(width: 335, height: 104)
-                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .background(Color(red: 0.78, green: 0.71, blue: 0.59))
                                         .cornerRadius(15)
                                         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                                         .cornerRadius(30)
@@ -81,7 +81,7 @@ struct ContentView: View {
                                     Rectangle()
                                         .foregroundColor(.clear)
                                         .frame(width: 335, height: 104)
-                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .background(Color(red: 0.78, green: 0.71, blue: 0.59))
                                         .cornerRadius(15)
                                         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                                         .cornerRadius(30)
@@ -105,7 +105,7 @@ struct ContentView: View {
                                     Rectangle()
                                         .foregroundColor(.clear)
                                         .frame(width: 335, height: 104)
-                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .background(Color(red: 0.78, green: 0.71, blue: 0.59))
                                         .cornerRadius(15)
                                         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                                         .cornerRadius(30)
@@ -128,7 +128,7 @@ struct ContentView: View {
                                     Rectangle()
                                         .foregroundColor(.clear)
                                         .frame(width: 335, height: 104)
-                                        .background(Color(red: 0.59, green: 0.72, blue: 0.71))
+                                        .background(Color(red: 0.78, green: 0.71, blue: 0.59))
                                         .cornerRadius(15)
                                         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                                         .cornerRadius(30)
@@ -188,7 +188,7 @@ struct ContentView: View {
             }
             .tag(2)
         }
-        .accentColor(Color(red: 1, green: 0.59, blue: 0.1)) // Set the accent color when a tab is selected
+        .accentColor(Color(red: 0.33, green: 0.50, blue: 0.40))// Set the accent color when a tab is selected
     }
 }
 
